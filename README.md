@@ -1,4 +1,14 @@
-# MyApp
+# MyStoreApp
+
+This project was done as a requirement for the completion of the Udacity FullStack JavaScript Nanodegree program.
+
+This project is a simple e-commerce web app that have all the basic functionalities of an e-commerce app :
+
+1.  Product listing
+2.  Product details page
+3.  Shopping cart
+4.  Checkout form
+5.  Order success page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 

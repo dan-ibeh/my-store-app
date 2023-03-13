@@ -45,12 +45,13 @@ export class CartComponent {
     const index = this.cart.indexOf(order);
     this.cart.splice(index, 1);
     this.cartService.removeFromCart(this.cart);
-    const price = this.productList.filter(
+    const product = this.productList.filter(
       (product) => product.id === order.product_id
-    )[0].price;
+    )[0];
     this.totalCost = parseFloat(
-      (this.totalCost - price * order.quantity).toFixed(2)
+      (this.totalCost - product.price * order.quantity).toFixed(2)
     );
+    alert(`${product.name} has been removed from your cart`)
   };
 
   navigateToSuccess = (name: string) => {

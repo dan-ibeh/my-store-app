@@ -4,10 +4,10 @@
         <h3>{{product.name}}</h3><br>
         <p>${{product.price}}</p><br>
         <p>{{product.description}}</p><br>
-        <select name=" quantity" id="quantity" value="{{product.quantity}}" [(ngModel)]="product.quantity">
+        <select name=" quantity" id="quantity" value="{{product.quantity}}" (ngModelChange)="quantityChanged(product.quantity)" [(ngModel)]="product.quantity">
             <option value="{{number}}" *ngFor="let number of numbers">{{number}}</option>
         </select><br>
-        <button class="btn btn-primary">Add to cart</button><br>
+        <button class="btn btn-primary" (click)="addProduct()">Add to cart</button><br>
         <a routerLink="/" class="back"><- Back to product list</a>
     </div>
 </div>
