@@ -45,9 +45,17 @@ export class CartComponent {
     const index = this.cart.indexOf(order);
     this.cart.splice(index, 1);
     this.cartService.removeFromCart(this.cart);
+    const price = this.productList.filter(
+      (product) => product.id === order.product_id
+    )[0].price;
+    this.totalCost = parseFloat(
+      (this.totalCost - price * order.quantity).toFixed(2)
+    );
   };
 
   navigateToSuccess = (name: string) => {
+    this.cart = [];
+    this.cartService.removeFromCart(this.cart);
     this.router.navigateByUrl(`success/${name}/${this.totalCost}`);
   };
 }
