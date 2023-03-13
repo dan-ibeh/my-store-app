@@ -1,0 +1,20 @@
+<form #form="ngForm" (ngSubmit)="submitForm()">
+    <label for="title">Full name</label>
+    <br>
+    <input type="text" name="title" required minlength="3" maxlength="32" placeholder="(minimum 3 characters)"
+        [(ngModel)]="name">
+    <br>
+    <label for="title">Address</label>
+    <br>
+    <input name="address" required minlength="6" placeholder="Address" [(ngModel)]="address"
+        placeholder="(minimum 6 characters)">
+    <br>
+    <label for="title">Credit card number</label>
+    <br>
+    <input name="credit card information" type="number" minlength="16" [(ngModel)]="creditCard" required
+        placeholder="(16-digit number)">
+    <br>
+    <p class="fs-6">We'll never share your payment details with anyone else</p>
+    <br>
+    <input type="submit" [disabled]="form.invalid" class="mt-10" value="Submit" class="btn btn-primary" (click)="moveToSuccess()">
+</form>

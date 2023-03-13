@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-center">
+    <div>
+        <h1 *ngIf="cart.length === 0">Cart is empty</h1>
+        <app-cart-item *ngFor="let order of cart" [order]="order" (removeProduct)="removeProduct($event)"></app-cart-item>
+        <h1 *ngIf="cart.length > 0">Total: ${{totalCost}}</h1>
+    </div>
+    <app-user-form (navigateToSuccess)="navigateToSuccess($event)"/>
+</div>

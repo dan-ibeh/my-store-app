@@ -1,0 +1,9 @@
+<div class="product-container">
+    <img src="{{product.url}}" height="210px" width="140px" alt="{{product.name}} image" class="image" /><br>
+    <div class="product-details">
+        <h6>{{product.name}}</h6><br>
+        <p>${{product.price}}</p><br>
+        Quantity: <input type="number" value = {{product.quantity}} disabled ><br>
+        <button class="btn btn-primary" (click)="removeFromCart(product.id)">Remove</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="product-container">
+    <img src="{{product.url}}" height="210px" width="140px" alt="{{product.name}} image" class="image"
+        (click)="navigateToProductDetails(product.id, product.quantity)" /><br>
+    {{product.name}}<br>
+    ${{product.price}}<br>
+    <select name=" quantity" id="quantity" [(ngModel)]=" product.quantity">
+        <option value="{{number}}" *ngFor="let number of numbers">{{number}}</option>
+    </select><br>
+    <button class="btn btn-primary" (click)="addToCart(product.id)">Add to cart</button>
+</div>

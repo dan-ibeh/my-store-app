@@ -1,0 +1,15 @@
+.product-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  margin: auto 10px;
+}
+
+.back {
+  text-decoration: none;
+}
